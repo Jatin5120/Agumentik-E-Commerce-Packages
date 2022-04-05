@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'colors.dart';
-
 const double kElevation = 10;
 
 const EdgeInsets kScaffoldPadding = EdgeInsets.symmetric(horizontal: 16.0);
@@ -25,23 +23,9 @@ const Duration kDefaultDuration = Duration(milliseconds: 250);
 
 const Duration kDelayDuration = Duration(seconds: 3);
 
-const headingStyle = TextStyle(
+const kHeadingStyle = TextStyle(
   fontSize: 28,
   fontWeight: FontWeight.bold,
   color: Colors.black,
   height: 1.5,
 );
-
-final otpInputDecoration = InputDecoration(
-  contentPadding: const EdgeInsets.symmetric(vertical: 15),
-  border: outlineInputBorder(),
-  focusedBorder: outlineInputBorder(),
-  enabledBorder: outlineInputBorder(),
-);
-
-OutlineInputBorder outlineInputBorder() {
-  return OutlineInputBorder(
-    borderRadius: BorderRadius.circular(15),
-    borderSide: const BorderSide(color: kTextColor),
-  );
-}

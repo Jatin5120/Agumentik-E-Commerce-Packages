@@ -1,7 +1,7 @@
 name: constants
-description: A new Flutter package project.
-version: 0.0.1
-homepage:
+description: Flutter package that contains constants that are being used in E commerce project.
+version: 1.0.0
+homepage: https://github.com/Jatin5120/Agumentik-E-Commerce-Packages
 
 environment:
   sdk: ">=2.16.2 <3.0.0"
