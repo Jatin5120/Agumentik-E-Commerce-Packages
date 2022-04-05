@@ -17,10 +17,10 @@ class DialogHelper {
   /// String title
   /// ```
   ///
-  /// * To Close this dialog, use `closeDialog` method of the same `DialogService` class
+  /// * To Close this dialog, use `closeDialog` method of the same `DialogHelper` class
   ///
   /// ```dart
-  /// DialogService.closeDialog()
+  /// DialogHelper.closeDialog()
   /// ```
   static void showLoadingDialog({String? message}) {
     Get.dialog(
@@ -61,10 +61,10 @@ class DialogHelper {
   /// String description;
   /// ```
   ///
-  /// * To Close this dialog, use `closeDialog` method of the same `DialogService` class
+  /// * To Close this dialog, use `closeDialog` method of the same `DialogHelper` class
   ///
   /// ```dart
-  /// DialogService.closeDialog()
+  /// DialogHelper.closeDialog()
   /// ```
   static Future<void> showConfirmationDialog({
     required String title,
@@ -119,12 +119,12 @@ class DialogHelper {
   /// String title
   /// String message
   /// ```
-  /// which defaults to 'Error'
+  /// which defaults to 'Success'
   ///
-  /// * To Close this dialog, use `closeDialog` method of the same `DialogService` class
+  /// * To Close this dialog, use `closeDialog` method of the same `DialogHelper` class
   ///
   /// ```dart
-  /// DialogService.closeDialog()
+  /// DialogHelper.closeDialog()
   /// ```
   static void showSuccessDialog({
     String title = 'Success',
@@ -173,10 +173,10 @@ class DialogHelper {
   /// ```
   /// which defaults to 'Error'
   ///
-  /// * To Close this dialog, use `closeDialog` method of the same `DialogService` class
+  /// * To Close this dialog, use `closeDialog` method of the same `DialogHelper` class
   ///
   /// ```dart
-  /// DialogService.closeDialog()
+  /// DialogHelper.closeDialog()
   /// ```
   static void showErrorDialog({
     String title = 'Error',
@@ -246,9 +246,9 @@ class DialogHelper {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SizedBox(
+              SizedBox(
                 height: 100,
-                // child: Image.asset(kIllustrationPath + 'input.png'),
+                child: Image.asset(kIllustrationPath + 'confirmation.png'),
               ),
               const SizedBox(height: 16),
               Text(
