@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'package:constants/constants.dart';
 import 'package:flutter/foundation.dart';
 
-import 'models.dart';
+import '../models.dart';
 
 class UserModel {
   final bool isSeller;
