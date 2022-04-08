@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import 'constants.dart';
+import '../constants.dart';
 
 ThemeData kThemeData = ThemeData(
   scaffoldBackgroundColor: Colors.white,
