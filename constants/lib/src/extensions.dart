@@ -1,9 +1,15 @@
+import 'dart:developer' as dev;
+
 import '../constants.dart';
 
 extension Validator on String {
   bool get isValidEmail => RegExp(r"^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.[a-zA-Z]+").hasMatch(this);
 
   bool get isValidMobileNumber => RegExp(r"^[6-9]\d{9}$").hasMatch(this);
+}
+
+extension Log on Object {
+  void log() => dev.log(toString());
 }
 
 extension Percentage on double {
