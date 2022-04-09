@@ -1,5 +1,11 @@
 # This is a generated file; do not edit or check into version control.
 fluttertoast=D:\\Flutter\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\fluttertoast-8.0.9\\
+path_provider=D:\\Flutter\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\path_provider-2.0.9\\
+path_provider_android=D:\\Flutter\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\path_provider_android-2.0.12\\
+path_provider_ios=D:\\Flutter\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\path_provider_ios-2.0.8\\
+path_provider_linux=D:\\Flutter\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\path_provider_linux-2.1.5\\
+path_provider_macos=D:\\Flutter\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\path_provider_macos-2.0.5\\
+path_provider_windows=D:\\Flutter\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\path_provider_windows-2.0.5\\
 url_launcher=D:\\Flutter\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\url_launcher-6.0.20\\
 url_launcher_android=D:\\Flutter\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\url_launcher_android-6.0.15\\
 url_launcher_ios=D:\\Flutter\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\url_launcher_ios-6.0.15\\
