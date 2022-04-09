@@ -9,7 +9,8 @@ class ImageHelper {
   static Future<File> getFileFromAssets(String path) async {
     final byteData = await rootBundle.load(path);
 
-    final file = File('${(await getTemporaryDirectory()).path}/$path');
+    File file = File('${(await getTemporaryDirectory()).path}/$path');
+    file = await file.create(recursive: true);
     await file.writeAsBytes(byteData.buffer.asUint8List(byteData.offsetInBytes, byteData.lengthInBytes));
 
     return file;
