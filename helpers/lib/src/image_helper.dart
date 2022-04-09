@@ -6,7 +6,7 @@ import 'package:path_provider/path_provider.dart';
 class ImageHelper {
   const ImageHelper._();
 
-  Future<File> getImageFileFromAssets(String path) async {
+  static Future<File> getFileFromAssets(String path) async {
     final byteData = await rootBundle.load(path);
 
     final file = File('${(await getTemporaryDirectory()).path}/$path');
