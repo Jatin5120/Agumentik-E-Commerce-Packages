@@ -85,9 +85,9 @@ class DialogHelper {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 100,
-                  child: Image.asset(kIllustrationPath + 'confirmation.png'),
+                  //child: Image.asset(kIllustrationPath + 'confirmation.png'),
                 ),
                 const SizedBox(height: 16),
                 Text(
@@ -150,9 +150,9 @@ class DialogHelper {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 100,
-                  child: Image.asset(kIllustrationPath + 'success.png'),
+                  //child: Image.asset(kIllustrationPath + 'success.png'),
                 ),
                 const SizedBox(height: 24),
                 Text(
@@ -211,13 +211,9 @@ class DialogHelper {
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     height: 75,
-                    child: Image.asset(kIllustrationPath + 'problem.png', package: 'helpers'),
-                  ),
-                  SizedBox(
-                    height: 75,
-                    child: Image.asset(kIllustrationPath + 'problem.png'),
+                    //child: Image.asset(kIllustrationPath + 'problem.png', package: 'helpers'),
                   ),
                   const SizedBox(height: 20),
                   Text(
@@ -275,9 +271,9 @@ class DialogHelper {
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 100,
-                  child: Image.asset(kIllustrationPath + 'confirmation.png'),
+                  //child: Image.asset(kIllustrationPath + 'confirmation.png'),
                 ),
                 const SizedBox(height: 16),
                 Text(
