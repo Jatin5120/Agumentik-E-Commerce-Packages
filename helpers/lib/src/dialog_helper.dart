@@ -1,9 +1,8 @@
+import 'package:components/components.dart';
+import 'package:constants/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
-import 'package:constants/constants.dart';
-
-import 'package:components/components.dart';
 
 class DialogHelper {
   const DialogHelper._();
@@ -24,22 +23,25 @@ class DialogHelper {
   /// ```
   static void showLoadingDialog({String? message}) {
     Get.dialog(
-      Dialog(
-        elevation: kElevation,
-        shape: kLargeBorder,
-        insetPadding: const EdgeInsets.all(20),
-        child: Padding(
-          padding: const EdgeInsets.all(20.0),
-          child: Row(
-            mainAxisSize: MainAxisSize.min,
-            mainAxisAlignment: message == null ? MainAxisAlignment.center : MainAxisAlignment.start,
-            children: [
-              const CircularProgressIndicator(),
-              if (message != null) ...[
-                const SizedBox(width: 16),
-                Text(message, style: Get.textTheme.subtitle1),
+      WillPopScope(
+        onWillPop: () async => false,
+        child: Dialog(
+          elevation: kElevation,
+          shape: kLargeBorder,
+          insetPadding: const EdgeInsets.all(20),
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: message == null ? MainAxisAlignment.center : MainAxisAlignment.start,
+              children: [
+                const CircularProgressIndicator(),
+                if (message != null) ...[
+                  const SizedBox(width: 16),
+                  Text(message, style: Get.textTheme.subtitle1),
+                ],
               ],
-            ],
+            ),
           ),
         ),
       ),
