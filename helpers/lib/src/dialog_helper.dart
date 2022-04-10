@@ -74,37 +74,40 @@ class DialogHelper {
     required List<Widget> actions,
   }) async {
     await Get.dialog(
-      Dialog(
-        child: Padding(
-          padding: const EdgeInsets.all(12).copyWith(top: 32),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              SizedBox(
-                height: 100,
-                child: Image.asset(kIllustrationPath + 'confirmation.png'),
-              ),
-              const SizedBox(height: 16),
-              Text(
-                title,
-                style: Get.textTheme.headline6,
-              ),
-              if (description != null) ...[
-                const SizedBox(height: 8),
-                Text(
-                  description,
-                  textAlign: TextAlign.center,
-                ),
-              ],
-              const SizedBox(height: 32),
-              for (Widget action in actions) ...[
-                const SizedBox(height: 8),
+      WillPopScope(
+        onWillPop: () async => false,
+        child: Dialog(
+          child: Padding(
+            padding: const EdgeInsets.all(12).copyWith(top: 32),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
                 SizedBox(
-                  width: double.maxFinite,
-                  child: action,
+                  height: 100,
+                  child: Image.asset(kIllustrationPath + 'confirmation.png'),
                 ),
+                const SizedBox(height: 16),
+                Text(
+                  title,
+                  style: Get.textTheme.headline6,
+                ),
+                if (description != null) ...[
+                  const SizedBox(height: 8),
+                  Text(
+                    description,
+                    textAlign: TextAlign.center,
+                  ),
+                ],
+                const SizedBox(height: 32),
+                for (Widget action in actions) ...[
+                  const SizedBox(height: 8),
+                  SizedBox(
+                    width: double.maxFinite,
+                    child: action,
+                  ),
+                ],
               ],
-            ],
+            ),
           ),
         ),
       ),
@@ -133,27 +136,30 @@ class DialogHelper {
     String message = 'Done',
   }) async {
     Get.dialog(
-      Dialog(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 32),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              SizedBox(
-                height: 100,
-                child: Image.asset(kIllustrationPath + 'success.png'),
-              ),
-              const SizedBox(height: 24),
-              Text(
-                title,
-                style: Get.textTheme.headline6!.copyWith(color: kSuccessColor),
-              ),
-              const SizedBox(height: 8),
-              Text(
-                message,
-                textAlign: TextAlign.center,
-              ),
-            ],
+      WillPopScope(
+        onWillPop: () async => false,
+        child: Dialog(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 32),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                SizedBox(
+                  height: 100,
+                  child: Image.asset(kIllustrationPath + 'success.png'),
+                ),
+                const SizedBox(height: 24),
+                Text(
+                  title,
+                  style: Get.textTheme.headline6!.copyWith(color: kSuccessColor),
+                ),
+                const SizedBox(height: 8),
+                Text(
+                  message,
+                  textAlign: TextAlign.center,
+                ),
+              ],
+            ),
           ),
         ),
       ),
@@ -185,39 +191,42 @@ class DialogHelper {
     String message = 'Something went wrong. Please try again after some time',
   }) {
     Get.dialog(
-      Dialog(
-        child: SizedBox(
-          height: 300,
-          child: Padding(
-            padding: const EdgeInsets.all(12).copyWith(top: 32),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                SizedBox(
-                  height: 75,
-                  child: Image.asset(kIllustrationPath + 'problem.png'),
-                ),
-                const SizedBox(height: 20),
-                Text(
-                  title,
-                  style: Get.textTheme.headline6!.copyWith(color: kErrorColor),
-                ),
-                const SizedBox(height: 12),
-                Text(
-                  message,
-                  // style: Get.textTheme.subtitle1,
-                  textAlign: TextAlign.center,
-                ),
-                const Spacer(),
-                const SizedBox(
-                  width: double.maxFinite,
-                  child: Button(
-                    label: "Okay, I'll try later",
-                    onTap: closeDialog,
+      WillPopScope(
+        onWillPop: () async => false,
+        child: Dialog(
+          child: SizedBox(
+            height: 300,
+            child: Padding(
+              padding: const EdgeInsets.all(12).copyWith(top: 32),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  SizedBox(
+                    height: 75,
+                    child: Image.asset(kIllustrationPath + 'problem.png'),
                   ),
-                ),
-              ],
+                  const SizedBox(height: 20),
+                  Text(
+                    title,
+                    style: Get.textTheme.headline6!.copyWith(color: kErrorColor),
+                  ),
+                  const SizedBox(height: 12),
+                  Text(
+                    message,
+                    // style: Get.textTheme.subtitle1,
+                    textAlign: TextAlign.center,
+                  ),
+                  const Spacer(),
+                  const SizedBox(
+                    width: double.maxFinite,
+                    child: Button(
+                      label: "Okay, I'll try later",
+                      onTap: closeDialog,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ),
@@ -241,53 +250,56 @@ class DialogHelper {
       }
     });
     await Get.dialog(
-      Dialog(
-        child: Padding(
-          padding: const EdgeInsets.all(12.0),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SizedBox(
-                height: 100,
-                child: Image.asset(kIllustrationPath + 'confirmation.png'),
-              ),
-              const SizedBox(height: 16),
-              Text(
-                message,
-                style: Get.textTheme.headline6,
-              ),
-              const SizedBox(height: 16),
-              FormLabel(label),
-              InputField(
-                controller: controller,
-              ),
-              const SizedBox(height: 16),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  const SizedBox(width: 16),
-                  Button(
-                    label: 'Cancel',
-                    onTap: () {
-                      isInputProvided = false;
-                      closeDialog();
-                    },
-                  ),
-                  const SizedBox(width: 16),
-                  Button(
-                    label: 'Submit',
-                    onTap: () {
-                      if (isInputProvided) {
+      WillPopScope(
+        onWillPop: () async => false,
+        child: Dialog(
+          child: Padding(
+            padding: const EdgeInsets.all(12.0),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(
+                  height: 100,
+                  child: Image.asset(kIllustrationPath + 'confirmation.png'),
+                ),
+                const SizedBox(height: 16),
+                Text(
+                  message,
+                  style: Get.textTheme.headline6,
+                ),
+                const SizedBox(height: 16),
+                FormLabel(label),
+                InputField(
+                  controller: controller,
+                ),
+                const SizedBox(height: 16),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    const SizedBox(width: 16),
+                    Button(
+                      label: 'Cancel',
+                      onTap: () {
+                        isInputProvided = false;
                         closeDialog();
-                      } else {
-                        showSnackBar('No input', 'Enter something first', dialogType: DialogType.warning);
-                      }
-                    },
-                  ),
-                ],
-              ),
-            ],
+                      },
+                    ),
+                    const SizedBox(width: 16),
+                    Button(
+                      label: 'Submit',
+                      onTap: () {
+                        if (isInputProvided) {
+                          closeDialog();
+                        } else {
+                          showSnackBar('No input', 'Enter something first', dialogType: DialogType.warning);
+                        }
+                      },
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       ),
