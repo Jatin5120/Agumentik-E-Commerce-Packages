@@ -7,6 +7,8 @@ import 'package:get/get.dart';
 class DialogHelper {
   const DialogHelper._();
 
+  static const String _package = 'package/helpers/';
+
   /// This method shows a [Loading dialog] as an [Overlay] on the screen
   ///
   /// This uses `Get` library to show a `Dialog` with a `CircularProgressIndicator`
@@ -84,7 +86,7 @@ class DialogHelper {
               children: [
                 SizedBox(
                   height: 100,
-                  child: Image.asset(kIllustrationPath + 'confirmation.png'),
+                  child: Image.asset(_package + kIllustrationPath + 'confirmation.png'),
                 ),
                 const SizedBox(height: 16),
                 Text(
@@ -204,7 +206,7 @@ class DialogHelper {
                 children: [
                   SizedBox(
                     height: 75,
-                    child: Image.asset(kIllustrationPath + 'problem.png'),
+                    child: Image.asset(_package + kIllustrationPath + 'problem.png'),
                   ),
                   const SizedBox(height: 20),
                   Text(
