@@ -217,6 +217,14 @@ class DialogHelper {
                     height: 75,
                     child: Image.asset(kIllustrationPath + 'problem.png', package: 'helpers'),
                   ),
+                  SizedBox(
+                    height: 75,
+                    child: Image.asset(_package + kIllustrationPath + 'problem.png'),
+                  ),
+                  SizedBox(
+                    height: 75,
+                    child: Image.asset(kIllustrationPath + 'problem.png'),
+                  ),
                   const SizedBox(height: 20),
                   Text(
                     title,
