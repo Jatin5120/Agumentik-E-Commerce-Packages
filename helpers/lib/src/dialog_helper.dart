@@ -7,7 +7,7 @@ import 'package:get/get.dart';
 class DialogHelper {
   const DialogHelper._();
 
-  static const String _package = 'package/helpers/';
+  static const String _package = 'packages/helpers/';
 
   /// This method shows a [Loading dialog] as an [Overlay] on the screen
   ///
