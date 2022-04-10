@@ -29,7 +29,7 @@ class DialogHelper {
         onWillPop: () async => false,
         child: Dialog(
           elevation: kElevation,
-          shape: kLargeBorder,
+          shape: kMediumBorder,
           insetPadding: const EdgeInsets.all(20),
           child: Padding(
             padding: const EdgeInsets.all(20.0),
@@ -79,6 +79,9 @@ class DialogHelper {
       WillPopScope(
         onWillPop: () async => false,
         child: Dialog(
+          elevation: kElevation,
+          shape: kMediumBorder,
+          insetPadding: const EdgeInsets.all(20),
           child: Padding(
             padding: const EdgeInsets.all(12).copyWith(top: 32),
             child: Column(
@@ -141,6 +144,9 @@ class DialogHelper {
       WillPopScope(
         onWillPop: () async => false,
         child: Dialog(
+          elevation: kElevation,
+          shape: kMediumBorder,
+          insetPadding: const EdgeInsets.all(20),
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 32),
             child: Column(
@@ -148,7 +154,7 @@ class DialogHelper {
               children: [
                 SizedBox(
                   height: 100,
-                  child: Image.asset(kIllustrationPath + 'success.png'),
+                  child: Image.asset(_package + kIllustrationPath + 'success.png'),
                 ),
                 const SizedBox(height: 24),
                 Text(
@@ -196,6 +202,9 @@ class DialogHelper {
       WillPopScope(
         onWillPop: () async => false,
         child: Dialog(
+          elevation: kElevation,
+          shape: kMediumBorder,
+          insetPadding: const EdgeInsets.all(20),
           child: SizedBox(
             height: 300,
             child: Padding(
@@ -255,6 +264,9 @@ class DialogHelper {
       WillPopScope(
         onWillPop: () async => false,
         child: Dialog(
+          elevation: kElevation,
+          shape: kMediumBorder,
+          insetPadding: const EdgeInsets.all(20),
           child: Padding(
             padding: const EdgeInsets.all(12.0),
             child: Column(
