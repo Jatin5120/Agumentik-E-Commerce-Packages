@@ -36,11 +36,11 @@ dev_dependencies:
 flutter: null
 # To add assets to your package, add an assets section, like this:
 assets:
-  - packages/helpers/assets/illustrations/
+  # - packages/helpers/assets/illustrations/
   - packages/helpers/assets/illustrations/confirmation.png
   - packages/helpers/assets/illustrations/success.png
   - packages/helpers/assets/illustrations/problem.png
-  - assets/illustrations/
+  # - assets/illustrations/
   - assets/illustrations/confirmation.png
   - assets/illustrations/success.png
   - assets/illustrations/problem.png
