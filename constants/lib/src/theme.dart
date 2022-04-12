@@ -30,11 +30,12 @@ InputDecorationTheme inputDecorationTheme() {
   );
 }
 
-AppBarTheme _kAppBarTheme = const AppBarTheme(
+AppBarTheme _kAppBarTheme = AppBarTheme(
   color: Colors.white,
   elevation: 0,
-  iconTheme: IconThemeData(color: Colors.black),
+  iconTheme: const IconThemeData(color: Colors.black),
   systemOverlayStyle: SystemUiOverlayStyle.dark,
+  titleTextStyle: _kTextTheme.subtitle1!.copyWith(color: Colors.black),
 );
 
 TextTheme _kTextTheme = const TextTheme(
